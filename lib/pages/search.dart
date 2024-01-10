@@ -16,7 +16,7 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
-  String ResultMessage = '';
+  String resultMessage = '';
   List<dynamic> plants = [];
   int len = 0;
   final formkey = GlobalKey<FormState>();
@@ -29,7 +29,7 @@ class _SearchState extends State<Search> {
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: Color.fromARGB(224, 126, 201, 149),
-          title: const Text("Green Garden "),
+          title: const Text("Green Garden -- Search Page"),
         ),
         body: SingleChildScrollView(
             scrollDirection: Axis.vertical,
@@ -46,16 +46,16 @@ class _SearchState extends State<Search> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   //text 'search for plants'
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 65, top: 25.0, bottom: 10.0),
-                    child: const Text("Search for Plants ",
-                        style: TextStyle(
-                            fontFamily: 'Parisienne',
-                            color: Color.fromARGB(224, 125, 189, 145),
-                            letterSpacing: 1.0,
-                            fontSize: 28)),
-                  ),
+          
+                    Center(
+                      child: const Text("Search for Plants ",
+                          style: TextStyle(
+                              fontFamily: 'Parisienne',
+                              color: Color.fromARGB(224, 125, 189, 145),
+                              letterSpacing: 1.0,
+                              fontSize: 28)),
+                    ),
+                  
                   //image
                   Container(
                     child: Image.asset("assets/searchplant.jpeg",
@@ -115,7 +115,7 @@ class _SearchState extends State<Search> {
                   // Result message si il ya du resultat 'Click on the name below to see more' sinon 'No Such plant ! '
                   PlantsName(
                     size: 25,
-                    Name: ResultMessage,
+                    Name: resultMessage,
                     color: Color.fromARGB(255, 31, 1, 1),
                   ),
 
@@ -209,10 +209,10 @@ class _SearchState extends State<Search> {
     print("len : " + len.toString());
 
     if (len != 0) {
-      ResultMessage = 'Click on the name below to see more';
+      resultMessage = 'Click on the name below to see more';
     } else {
-      ResultMessage = 'No Such plant ! ';
+      resultMessage = 'No Such plant ! ';
     }
-    print(ResultMessage);
+    print(resultMessage);
   }
 }

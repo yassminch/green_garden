@@ -13,6 +13,7 @@ class greenGarden extends StatelessWidget {
   //confi d'application
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(foregroundColor: Colors.green),

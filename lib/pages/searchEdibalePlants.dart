@@ -29,7 +29,7 @@ class _SearchEdibalePalantsState extends State<SearchEdibalePalants> {
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: Color.fromARGB(224, 126, 201, 149),
-          title: const Text("Green Garden "),
+          title: const Text("Green Garden -- Edibale Palants"),
         ),
         body: SingleChildScrollView(
             scrollDirection: Axis.vertical,
@@ -46,16 +46,16 @@ class _SearchEdibalePalantsState extends State<SearchEdibalePalants> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   //text 'Edibale Plants'
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 85, top: 25.0, bottom: 10.0),
-                    child: const Text("Edibale Plants ",
-                        style: TextStyle(
-                            fontFamily: 'Parisienne',
-                            color: Color.fromARGB(224, 125, 189, 145),
-                            letterSpacing: 1.0,
-                            fontSize: 28)),
-                  ),
+                  
+                     Center(
+                       child: const Text("Edibale Plants ",
+                          style: TextStyle(
+                              fontFamily: 'Parisienne',
+                              color: Color.fromARGB(224, 125, 189, 145),
+                              letterSpacing: 1.0,
+                              fontSize: 28)),
+                     ),
+                  
                   //image
                   Container(
                     child: Image.asset("assets/b1.jpeg", fit: BoxFit.cover),

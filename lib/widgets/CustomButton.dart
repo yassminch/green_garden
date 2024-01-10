@@ -30,7 +30,7 @@ class CustomButton extends StatelessWidget {
         child: Text(nom,
             style: TextStyle(
               fontSize: 23,
-              fontFamily: 'Parisienne',
+              fontFamily: 'Sacramento',
             )),
       ),
     );
